@@ -1,0 +1,19 @@
+name: SurveyBear CI/CD AZURE
+
+# specific branch build with batching
+trigger:
+  batch: true
+  branches:
+    include:
+    - test-branch
+
+pool:
+  vmImage: ubuntu-latest
+      
+jobs:
+- job: test
+   
+  steps: 
+    - script:  npm install
+    - script: npx nx test surveybear-api
+    - script: npx nx test surveybear-survey-spa
