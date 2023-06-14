@@ -4,6 +4,7 @@ import { body, param, validationResult } from 'express-validator';
 
 const router = Router();
 
+
 router.get(
     '/survey/:surveyId',
     param("surveyId").isMongoId(),
@@ -62,7 +63,6 @@ router.patch('/survey/:surveyId',
             next(err);
         }
     });
-
 
 router.get('/api/todos', (req, res) => res.status(200).send());
 
