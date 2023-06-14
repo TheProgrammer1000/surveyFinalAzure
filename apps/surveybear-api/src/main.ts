@@ -1,5 +1,6 @@
-import {connect} from "@surveybear/surveybear-lib"
-import app from "./app";
+import { connect } from '@surveybear/surveybear-lib';
+import app from './app';
+
 
 const port = process.env.PORT;
 
